@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "What would you like to name your BC based women's apparel store?"
+@new_name = gets.chomp
+
+Store.create!(name: @new_name, annual_revenue: 500, mens_apparel: true, womens_apparel: false)
+
+puts Store.count
