@@ -15,3 +15,8 @@ puts "There are #{Store.count} Stores in the dB"
 @mens_stores = Store.where(mens_apparel: true)
 puts @mens_stores.count
 @mens_stores.each { |store| puts "#{store.name} annual revenue is #{store.annual_revenue}!"}
+
+
+@womens_stores = Store.where(womens_apparel: true).where("annual_revenue < ?", 1000000)
+
+puts @womens_stores.count
